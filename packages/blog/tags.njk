@@ -1,0 +1,12 @@
+---
+title: 'Blog tags'
+permalink: /tags/
+layout: default
+---
+<h1 class="page-title">Blog tags</h1>
+
+<ul>
+{% for tag in collections.tagList %}
+  <li><a href="/blog/tags/{{ tag | slug }}">{{ tag }}</a></li>
+{% endfor %}
+</ul>

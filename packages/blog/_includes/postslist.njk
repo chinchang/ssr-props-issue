@@ -1,0 +1,29 @@
+<ol reversed="reversed" class="post-list">
+  {% for post in postslist %}
+    <li class="post-list-item{% if post.url == url %} post-list-item--active{% endif %}">
+      <a href="{{ post.url | url }}" class="post-list-item__link">
+        {% if post.data.title %}{{ post.data.title }}
+        {% else %}
+          <code>{{ post.url }}</code>
+        {% endif %}
+      </a>
+      <img src="{{ post.data.social_image }}" class="post-list-item__img"/>
+      <div class="post-excerpt">
+        {{ post.templateContent | striptags(true) | truncate(140)  }}
+      </div>
+      <div class="post-meta">
+        <img class="post-list-item__avatar" width="24" src="{{ authors[post.data.author.id].img }}" alt=""/>
+        <span style="vertical-align: middle">
+          by {{ authors[post.data.author.id].name }}. Posted on
+          <time class="post-list-item__date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>. Tagged with
+          {% for tag in post.data.tags %}
+            {%- if tag != "posts" -%}
+              {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+              <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+            {%- endif -%}
+          {% endfor %}
+        </span>
+      </div>
+    </li>
+  {% endfor %}
+</ol>

@@ -1,0 +1,12 @@
+{
+  "title": "a Blog",
+  "url": "https://a.dev/blog",
+  "description": "articles",
+  "feed": {
+    "subtitle": "feed",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "url": "https://a.dev/blog/feed/feed.xml",
+    "id": "https://a.com"
+  }
+}

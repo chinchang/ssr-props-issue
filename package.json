@@ -1,0 +1,15 @@
+{
+  "name": "sspissue",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "bootstrap": "yarn",
+    "start": "cd packages/nextjs && yarn run dev",
+    "start:home": "cd packages/app && yarn start",
+    "start:blog": "cd packages/blog && yarn start"
+  }
+}
