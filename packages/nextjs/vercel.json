@@ -7,10 +7,18 @@
 
     {
       "source": "/api/socialImage/target.*",
-      "destination": "/api/targetSocialImage",
-      "headers": {
-        "cache-control": "max-age=62,s-maxage=62"
-      }
+      "destination": "/api/targetSocialImage"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/api/socialImage/target",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "max-age=62,s-maxage=62"
+        }
+      ]
     }
   ]
 }
