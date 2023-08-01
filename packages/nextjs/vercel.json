@@ -1,5 +1,16 @@
 {
   "rewrites": [
-    { "source": "/blog", "destination": "https://monorepo-blog-chi.vercel.app" }
+    {
+      "source": "/blog",
+      "destination": "https://monorepo-blog-chi.vercel.app"
+    },
+
+    {
+      "source": "/api/socialImage/target.*",
+      "dest": "/api/targetSocialImage",
+      "headers": {
+        "cache-control": "max-age=62,s-maxage=62"
+      }
+    }
   ]
 }
