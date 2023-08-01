@@ -7,7 +7,7 @@
 
     {
       "source": "/api/socialImage/target.*",
-      "dest": "/api/targetSocialImage",
+      "destination": "/api/targetSocialImage",
       "headers": {
         "cache-control": "max-age=62,s-maxage=62"
       }
