@@ -1,8 +1,6 @@
 const isProd = process.env.NODE_ENV === "production";
 
 const moduleExports = {
-  // Use the CDN in production and localhost for development.
-  assetPrefix: isProd ? "/nextjs" : "",
   async redirects() {
     return [
       {
