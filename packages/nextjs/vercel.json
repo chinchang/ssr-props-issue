@@ -6,7 +6,7 @@
     },
 
     {
-      "source": "/api/socialImage/target.*",
+      "source": "/api/socialImage/target",
       "destination": "/api/targetSocialImage"
     }
   ],
